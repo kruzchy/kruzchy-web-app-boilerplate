@@ -77,9 +77,9 @@ $teal-900: #234e52;
 $blue-100: #ebf8ff;
 $blue-200: #bee3f8;
 $blue-300: #90cdf4;
-$blue-400: #63b3ed;
+$blue-400: #182da5;
 $blue-500: #4299e1;
-$blue-600: #3182ce;
+$blue-600: #2078ca;
 $blue-700: #2b6cb0;
 $blue-800: #2c5282;
 $blue-900: #2a4365;
@@ -116,3 +116,51 @@ $pink-600: #d53f8c;
 $pink-700: #b83280;
 $pink-800: #97266d;
 $pink-900: #702459;
+
+
+//BOX SHADOWS
+$shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
+$shadow-none: none;
+
+//Breakpoints
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
